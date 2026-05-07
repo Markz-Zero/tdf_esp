@@ -40,7 +40,7 @@ with col2:
     st.markdown("### 💡 Preguntas sugeridas:")
     
     # NUEVAS preguntas optimizadas para mayor similitud
-    if st.button("¿Dónde juegan el perro y el gato?", use_container_width=True):
+    if st.button("¿Dónde juegan el dragón y el gato?", use_container_width=True):
         st.session_state.question = "¿Dónde juegan el dragón y el gato?"
         st.rerun()
     
