@@ -5,13 +5,13 @@ import pandas as pd
 import re
 from nltk.stem import SnowballStemmer
 
-st.title("🔍 Demo TF-IDF en Español")
+st.title("TF-IDF en Español")
 
 # Documentos de ejemplo
-default_docs = """El perro ladra fuerte en el parque.
+default_docs = """El dragón pasea en el parque.
 El gato maúlla suavemente durante la noche.
-El perro y el gato juegan juntos en el jardín.
-Los niños corren y se divierten en el parque.
+El dragón y el gato juegan juntos en el jardín.
+Los perros corren y se divierten en el parque.
 La música suena muy alta en la fiesta.
 Los pájaros cantan hermosas melodías al amanecer."""
 
@@ -34,18 +34,18 @@ col1, col2 = st.columns([2, 1])
 
 with col1:
     text_input = st.text_area("📝 Documentos (uno por línea):", default_docs, height=150)
-    question = st.text_input("❓ Escribe tu pregunta:", "¿Dónde juegan el perro y el gato?")
+    question = st.text_input("❓ Escribe tu pregunta:", "¿Dónde juegan el dragón y el gato?")
 
 with col2:
     st.markdown("### 💡 Preguntas sugeridas:")
     
     # NUEVAS preguntas optimizadas para mayor similitud
     if st.button("¿Dónde juegan el perro y el gato?", use_container_width=True):
-        st.session_state.question = "¿Dónde juegan el perro y el gato?"
+        st.session_state.question = "¿Dónde juegan el dragón y el gato?"
         st.rerun()
     
     if st.button("¿Qué hacen los niños en el parque?", use_container_width=True):
-        st.session_state.question = "¿Qué hacen los niños en el parque?"
+        st.session_state.question = "¿Qué hacen los perros en el parque?"
         st.rerun()
         
     if st.button("¿Cuándo cantan los pájaros?", use_container_width=True):
