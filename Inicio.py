@@ -44,7 +44,7 @@ with col2:
         st.session_state.question = "¿Dónde juegan el dragón y el gato?"
         st.rerun()
     
-    if st.button("¿Qué hacen los niños en el parque?", use_container_width=True):
+    if st.button("¿Qué hacen los perros en el parque?", use_container_width=True):
         st.session_state.question = "¿Qué hacen los perros en el parque?"
         st.rerun()
         
